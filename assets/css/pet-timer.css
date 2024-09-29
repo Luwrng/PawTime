@@ -177,7 +177,7 @@
   .h1 {
     color: var(--white);
     font-family: var(--ff-bangers);
-    font-size: var(--fs-1);
+    font-size: 5em;
     font-weight: var(--fw-400);
     letter-spacing: 1px;
   }
@@ -726,7 +726,10 @@
       padding-inline-start: 10%;
     }
   
-    .hero-text { font-size: 2.4rem; }
+    .hero-text { 
+      font-size: 7.4rem; 
+      font-family: "Nunito Sans", sans-serif !important;
+    }
   
   
     /**
