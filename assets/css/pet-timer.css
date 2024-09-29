@@ -399,6 +399,28 @@
   .hero .btn:is(:hover, :focus) { background-color: var(--portland-orange); }
   
 
+  /*-----------------------------------*\
+  #SERVICE
+\*-----------------------------------*/
+
+.service .img {
+  margin-inline: auto;
+  margin-block-end: 30px;
+}
+
+.service .section-title { margin-block-end: 60px; }
+
+.service-card { text-align: center; }
+
+.service-card .card-icon {
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.service-card .card-title { margin-block: 10px; }
+
+.service-card .card-text { color: var(--spanish-gray); }
+
   
   
   /*-----------------------------------*\
@@ -929,5 +951,6 @@
         padding: 2em; /* Optional: Add some padding for better spacing */
         margin-right: 10em;
     }
-  
+
+    
   }
