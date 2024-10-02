@@ -796,7 +796,7 @@
     .navbar-action-btn { display: none; }
   
     .header {
-      --color: var(--white);
+      /* --color: var(--white); */
       background: none;
     }
   
