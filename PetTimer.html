@@ -38,15 +38,9 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
 
   <!-- Font Awesome CDN-->
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
-<!-- Google Font -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-  rel="stylesheet"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
 
 </head>
 
@@ -72,17 +66,17 @@
           <li class="navbar-item">
             <a href="index.html" class="navbar-link" data-nav-link>Home</a>
           </li>
-          
+
           <li class="navbar-item">
             <a href="#" class="navbar-link" data-nav-link>About</a>
           </li>
 
           <li class="navbar-item"></li>
-            <a href="#" class="navbar-link" data-nav-link>Price</a>
+          <a href="#" class="navbar-link" data-nav-link>Price</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#pet_timer" class="navbar-link" data-nav-link>Pet Timer</a>
+            <a href="#pet_timer" class="navbar-link" data-nav-link>Pet Service</a>
           </li>
 
           <li class="navbar-item">
@@ -116,7 +110,7 @@
   <main>
     <article>
 
-       <!-- 
+      <!-- 
         - #HERO
       -->
 
@@ -124,56 +118,119 @@
         style="background-image: url('./assets/images/hero-banner4.jpg')">
         <div class="container">
 
+          <h1 class="h1 hero-title" style="margin-bottom: 0.5em;">
+            <span class="span">Services for every</span> dog and cat
+          </h1>
+          <a href="#service" class="btn">Read More</a>
         </div>
       </section>
 
-      <section class="section" aria-label="">
+
+      <!-- 
+        - #SERVICE SECTION
+      -->
+      <section class="section" aria-label="" id="service">
         <div class="container">
           <h2 class="h2 section-title">
-            Our <span class="span">Services</span> 
+            Our <span class="span">Services</span>
           </h2>
           <h3 class="h3 section-title">
-            Choose the service that's your <span class="span">pet needs.</span>
+            Choose the service that's your <span class="span">pet needs</span>
           </h3>
-        <div class="row">
-          <div class="column">
-            <a href="PetTimer.html" class="card">
-              <div class="icon-wrapper">
-                <i class="fa-solid fa-suitcase"></i>
+          <div class="row">
+            <div class="column">
+              <a href="PetTimer.html" class="card">
+                <div class="icon-wrapper">
+                  <i class="fa-solid fa-suitcase"></i>
+                </div>
+                <h3>Boarding</h3>
+                <p>
+                  Your pets stay overnight in your sitter’s home. They’ll be treated like part of the family in a
+                  comfortable environment.
+                </p>
+              </a>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                  <i class="fa-solid fa-house-chimney"></i>
+                </div>
+                <h3>House Sitting</h3>
+                <p>
+                  Your sitter takes care of your pets and your house. Your pets will get all the attention they need
+                  from the comfort of home.
+                </p>
               </div>
-              <h3>Boarding</h3>
-              <p>
-                Your pets stay overnight in your sitter’s home. They’ll be treated like part of the family in a comfortable environment.
-              </p>
-            </a>
-          </div>
-          <div class="column">
-            <div class="card">
-              <div class="icon-wrapper">
-                <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                  <i class="fa-solid fa-bone"></i>
+                </div>
+                <h3>Drop-In Visits</h3>
+                <p>
+                  Your sitter drops by your home to play with your pets, offer food, and give potty breaks or clean the
+                  litter box.
+                </p>
               </div>
-              <h3>House Sitting</h3>
-              <p>
-                Your sitter takes care of your pets and your house. Your pets will get all the attention they need from the comfort of home.
-              </p>
             </div>
           </div>
-          <div class="column">
-            <div class="card">
-              <div class="icon-wrapper">
-                <i class="fa-solid fa-bone"></i>
-              </div>
-              <h3>Drop-In Visits</h3>
-              <p>
-                Your sitter drops by your home to play with your pets, offer food, and give potty breaks or clean the litter box.
-              </p>
-            </div>
-          </div>
-        </div>
         </div>
       </section>
 
-   
+      <!-- 
+        - #FORM
+      -->
+
+      <section class="section form" aria-label="form">
+
+        <h2 class="h2 section-title">
+          <span class="span">Book your</span> service now
+        </h2>
+        <div class="form-container">
+
+          <header>Boarding</header>
+          <form action="#">
+            <div class="form first">
+              <div class="information">
+                <span class="title">Boarding Information</span>
+
+                <div class="input-field">
+                  <label for="address">Address</label>
+                  <input type="text" placeholder="Enter your address">
+                </div>
+
+                <div class="fields">
+
+                  <div class="input-field">
+                    <label for="city">Drop off</label>
+                    <input type="date" placeholder="Drop off">
+                  </div>
+
+                  <!-- Arrow icon -->
+                  <div class="arrow-icon">
+                    &#8594;
+                  </div>
+
+                  <div class="input-field">
+                    <label for="state">Pick up</label>
+                    <input type="date" placeholder="Pick up">
+                  </div>
+
+                </div>
+
+                <div class="input-field">
+                  <label for="condition">Condition (optional)</label>
+                  <textarea placeholder="Enter your condition" style="width: 500px; height: 300px;"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn">Submit</button>
+            </div>
+            
+          </form>
+        </div>
+
+      </section>
 
       <!-- 
         - #SERVICE
@@ -191,7 +248,7 @@
         </div>
       </section>
 
-     
+
 
     </article>
   </main>
