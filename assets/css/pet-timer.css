@@ -1094,6 +1094,30 @@ p {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+.textarea{
+  width: 500px;
+  height: 300px;
+}
+
+@media screen and (max-width: 550px) {
+  .form-container {
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .textarea{
+    width: 225px;
+    height: 300px;
+  }
+  
+}
+
 .form-container header {
   position: relative;
   font-size: 20px;
@@ -1132,16 +1156,130 @@ p {
   color: #333;
 }
 
+.pet-type-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 20px; /* Increase the width */
+  height: 20px; /* Increase the height */
+  margin-right: 10px; /* Increase the margin */
+}
+
+.checkbox-item label {
+  font-size: 18px; /* Increase the font size */
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+  accent-color: var(--portland-orange); /* This will change the checkbox itself */
+}
+
+
+/* 
+RADIO 
+*/
+input[type="radio"] {
+  display: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.radio-item {
+  position: relative;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8em;
+  border: 1px solid #aaa;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.radio-item:before {
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
+input[type="radio"]:checked + span.radio-item:before {
+  height: 1.5em;
+  width: 1.5em;
+  border: 0.5em solid #ffffff;
+  background-color: #ed6335;
+}
+
+.radio-item:hover {
+  background-color: #f0f0f0;
+}
+
+input[type="radio"]:checked + span.radio-item {
+  background-color: #ed6335;
+  color: white;
+  border-color: #ed6335;
+}
+
+/* Specific styles for "How often do you need this service?" */
+.how-often-container .radio-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8em;
+  border: 1px solid #aaa;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.how-often-container .radio-item:before {
+  content: none; /* Remove the circle */
+}
+
+.how-often-container input[type="radio"]:checked + span.radio-item {
+  background-color: #ed6335;
+  color: white;
+  border-color: #ed6335;
+}
+
+.how-often-container .radio-item:hover {
+  background-color: #f0f0f0;
+}
+
+
 .form-container form .fields {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space- between;
   flex-wrap: wrap;
 }
 
 .form-container form .input-field {
   display: flex;
-  width: calc(100% / 2 - 15px);
+  width: calc(100% / 1 - 15px);
   flex-direction: column;
   margin: 4px 0;
 }
@@ -1167,11 +1305,6 @@ p {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
 }
 
-.arrow-icon {
-  margin-top: 20px;
-  font-size: 24px;
-}
-
 textarea {
   resize: none;
   padding: 10px;
@@ -1181,10 +1314,68 @@ textarea {
 }
 
 .form .btn {
-  background-color: var(--portland-orange);
+  background-color: var(--black);
   float: right;
+  margin-top: 20px;
 }
 
 .form .btn:is(:hover, :focus) {
-  background-color: var(--black);
+  background-color: var(--portland-orange);
+}
+
+/* 
+Days of the week 
+*/
+.Popover {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
+}
+
+.Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.Fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Button input[type="checkbox"] {
+  display: none;
+}
+
+.Button span {
+  pointer-events: none;
+}
+
+.Button input[type="checkbox"]:checked + span {
+  background-color: #ed6335;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

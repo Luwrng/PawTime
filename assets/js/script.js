@@ -61,3 +61,20 @@ const activeElemOnScroll = function () {
 }
 
 addEventOnElem(window, "scroll", activeElemOnScroll);
+
+function toggleVisibility() {
+  const oneTime = document.querySelector('.one-time-selected');
+  const repeatWeekly = document.querySelector('.repeat-weekly-selected');
+  const selected = document.querySelector('input[name="service-frequency"]:checked').value;
+
+  if (selected === 'one-time') {
+    oneTime.style.display = 'block';
+    repeatWeekly.style.display = 'none';
+  } else {
+    oneTime.style.display = 'none';
+    repeatWeekly.style.display = 'block';
+  }
+}
+
+// Call the function to set the initial state
+toggleVisibility();

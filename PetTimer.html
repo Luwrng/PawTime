@@ -90,10 +90,6 @@
 
       <div class="header-actions">
 
-        <!-- <button class="action-btn" aria-label="Search">
-          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-        </button> -->
-
         <button class="action-btn user" aria-label="User">
           <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
         </button>
@@ -119,7 +115,7 @@
         <div class="container">
 
           <h1 class="h1 hero-title" style="margin-bottom: 0.5em;">
-            <span class="span">Services for every</span> dog and cat
+            <span class="span">Services for every</span> cat and dog
           </h1>
           <a href="#service" class="btn">Read More</a>
         </div>
@@ -139,11 +135,11 @@
           </h3>
           <div class="row">
             <div class="column">
-              <a href="PetTimer.html" class="card">
+              <a href="#petboarding-form" class="card">
                 <div class="icon-wrapper">
                   <i class="fa-solid fa-suitcase"></i>
                 </div>
-                <h3>Boarding</h3>
+                <h3>Pet Boarding</h3>
                 <p>
                   Your pets stay overnight in your sitter’s home. They’ll be treated like part of the family in a
                   comfortable environment.
@@ -151,7 +147,7 @@
               </a>
             </div>
             <div class="column">
-              <div class="card">
+              <a href="#housesitting-form" class="card">
                 <div class="icon-wrapper">
                   <i class="fa-solid fa-house-chimney"></i>
                 </div>
@@ -160,10 +156,10 @@
                   Your sitter takes care of your pets and your house. Your pets will get all the attention they need
                   from the comfort of home.
                 </p>
-              </div>
+              </a>
             </div>
             <div class="column">
-              <div class="card">
+              <a href="#drop-in-visits-form" class="card">
                 <div class="icon-wrapper">
                   <i class="fa-solid fa-bone"></i>
                 </div>
@@ -172,28 +168,64 @@
                   Your sitter drops by your home to play with your pets, offer food, and give potty breaks or clean the
                   litter box.
                 </p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- 
-        - #FORM
+        - #FORMS
       -->
 
-      <section class="section form" aria-label="form">
+      <section class="section petboarding-form" aria-label="form" id="petboarding-form">
 
         <h2 class="h2 section-title">
-          <span class="span">Book your</span> service now
+          Book your service now <span class="span">for when you're away</span>
         </h2>
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-suitcase"></i>
+        </div>
+        <h3>Pet Boarding</h3>
         <div class="form-container">
 
-          <header>Boarding</header>
+          <header>Pet Boarding</header>
           <form action="#">
             <div class="form first">
               <div class="information">
-                <span class="title">Boarding Information</span>
+                <span class="title">Pet Boarding Information</span>
+                <div class="pet-type-container">
+                  <label for="pet-type">Pet Type</label>
+
+                  <div class="checkbox-container">
+                    <div class="checkbox-item">
+                      <input type="checkbox" id="cat" name="pet-type" value="cat">
+                      <label for="cat">Cat</label>
+                    </div>
+                    <div class="checkbox-item">
+                      <input type="checkbox" id="dog" name="pet-type" value="dog">
+                      <label for="dog">Dog</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pet-count-container">
+                  <label>How many pets?</label>
+                  <fieldset role="radiogroup" class="radio-group">
+                    <label>
+                      <input type="radio" role="radio" name="spaces-required" value="1" checked>
+                      <span class="radio-item">1</span>
+                    </label>
+                    <label>
+                      <input type="radio" role="radio" name="spaces-required" value="2">
+                      <span class="radio-item">2</span>
+                    </label>
+                    <label>
+                      <input type="radio" role="radio" name="spaces-required" value="3">
+                      <span class="radio-item">3+</span>
+                    </label>
+                  </fieldset>
+                </div>
 
                 <div class="input-field">
                   <label for="address">Address</label>
@@ -207,9 +239,81 @@
                     <input type="date" placeholder="Drop off">
                   </div>
 
-                  <!-- Arrow icon -->
-                  <div class="arrow-icon">
-                    &#8594;
+                  <div class="input-field">
+                    <label for="state">Pick up</label>
+                    <input type="date" placeholder="Pick up">
+                  </div>
+
+                </div>
+
+                <div class="input-field">
+                  <label for="condition">Condition (optional)</label>
+                  <textarea class="textarea" placeholder="Enter your condition"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn">Submit</button>
+            </div>
+
+          </form>
+        </div>
+
+      </section>
+
+      <section class="section housesitting-form" aria-label="form" id="housesitting-form">
+
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-house-chimney"></i>
+        </div>
+        <h3>House Sitting</h3>
+        <div class="form-container">
+
+          <header>House Sitting</header>
+          <form action="#">
+            <div class="form first">
+              <div class="information">
+                <span class="title">House Sitting Information</span>
+                <div class="pet-type-container">
+                  <label for="pet-type">Pet Type</label>
+                  <div class="checkbox-container">
+                    <div class="checkbox-item">
+                      <input type="checkbox" id="cat" name="pet-type" value="cat">
+                      <label for="cat">Cat</label>
+                    </div>
+                    <div class="checkbox-item">
+                      <input type="checkbox" id="dog" name="pet-type" value="dog">
+                      <label for="dog">Dog</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pet-count-container">
+                  <label>How many pets?</label>
+                  <fieldset role="radiogroup" class="radio-group">
+                    <label>
+                      <input type="radio" role="radio" name="spaces-required" value="1" checked>
+                      <span class="radio-item">1</span>
+                    </label>
+                    <label>
+                      <input type="radio" role="radio" name="spaces-required" value="2">
+                      <span class="radio-item">2</span>
+                    </label>
+                    <label>
+                      <input type="radio" role="radio" name="spaces-required" value="3">
+                      <span class="radio-item">3+</span>
+                    </label>
+                  </fieldset>
+                </div>
+
+                <div class="input-field">
+                  <label for="address">Address</label>
+                  <input type="text" placeholder="Enter your address">
+                </div>
+
+                <div class="fields">
+
+                  <div class="input-field">
+                    <label for="city">Drop off</label>
+                    <input type="date" placeholder="Drop off">
                   </div>
 
                   <div class="input-field">
@@ -221,12 +325,146 @@
 
                 <div class="input-field">
                   <label for="condition">Condition (optional)</label>
-                  <textarea placeholder="Enter your condition" style="width: 500px; height: 300px;"></textarea>
+                  <textarea class="textarea" placeholder="Enter your condition"></textarea>
                 </div>
               </div>
               <button type="submit" class="btn">Submit</button>
             </div>
-            
+
+          </form>
+        </div>
+
+      </section>
+
+      <section class="section drop-in-visits-form" aria-label="form" id="drop-in-visits-form">
+
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-bone"></i>
+        </div>
+        <h3>Drop-In Visits</h3>
+        <div class="form-container">
+
+          <header>Drop-In Visits</header>
+          <form action="#">
+            <div class="form first">
+              <div class="information">
+                <span class="title">Drop-In Visits Information</span>
+                <div class="pet-type-container">
+                  <label for="pet-type">Pet Type</label>
+                  <div class="checkbox-container">
+                    <div class="checkbox-item">
+                      <input type="checkbox" id="cat" name="pet-type" value="cat">
+                      <label for="cat">Cat</label>
+                    </div>
+                    <div class="checkbox-item">
+                      <input type="checkbox" id="dog" name="pet-type" value="dog">
+                      <label for="dog">Dog</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pet-count-container">
+                  <label>How many pets?</label>
+                  <fieldset role="radiogroup" class="radio-group">
+                    <label>
+                      <input type="radio" role="radio" name="spaces-required" value="1" checked>
+                      <span class="radio-item">1</span>
+                    </label>
+                    <label>
+                      <input type="radio" role="radio" name="spaces-required" value="2">
+                      <span class="radio-item">2</span>
+                    </label>
+                    <label>
+                      <input type="radio" role="radio" name="spaces-required" value="3">
+                      <span class="radio-item">3+</span>
+                    </label>
+                  </fieldset>
+                </div>
+
+                <div class="input-field">
+                  <label for="address">Address</label>
+                  <input type="text" placeholder="Enter your address">
+                </div>
+
+                <div class="how-often-container">
+                  <label>How often do you need this service?</label>
+                  <fieldset role="radiogroup" class="radio-group">
+                    <label>
+                      <input type="radio" role="radio" name="service-frequency" value="one-time" checked onchange="toggleVisibility()">
+                      <span class="radio-item"><i class="fa-regular fa-calendar"></i>One Time</span>
+                    </label>
+                    <label>
+                      <input type="radio" role="radio" name="service-frequency" value="repeat-weekly" onchange="toggleVisibility()">
+                      <span class="radio-item"><i class="fa-solid fa-calendar-week"></i>Repeat Weekly</span>
+                    </label>
+                  </fieldset>
+                </div>
+                
+                <div class="one-time-selected" style="margin-top: 10px;">
+                  <div class="fields">
+                    <div class="input-field">
+                      <label for="from-date">From what date?</label>
+                      <input type="date">
+                    </div>
+                    <div class="input-field">
+                      <label for="to-date">To what date?</label>
+                      <input type="date">
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="repeat-weekly-selected" style="display:none; margin-top: 10px;">
+                  <label for="which-days">For which days?</label>
+                  <div class="Popover">
+                    <div class="Wrapper">
+                      <fieldset class="Fieldset">
+                        <label class="Button">
+                          <input type="checkbox" id="sunday">
+                          <span>Sun</span>
+                        </label>
+                        <label class="Button">
+                          <input type="checkbox" id="monday">
+                          <span>Mon</span>
+                        </label>
+                        <label class="Button">
+                          <input type="checkbox" id="tuesday">
+                          <span>Tue</span>
+                        </label>
+                        <label class="Button">
+                          <input type="checkbox" id="wednesday">
+                          <span>Wed</span>
+                        </label>
+                        <label class="Button">
+                          <input type="checkbox" id="thursday">
+                          <span>Thu</span>
+                        </label>
+                        <label class="Button">
+                          <input type="checkbox" id="friday">
+                          <span>Fri</span>
+                        </label>
+                        <label class="Button">
+                          <input type="checkbox" id="saturday">
+                          <span>Sat</span>
+                        </label>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="input-field">
+                    <label for="start-date">Start Date</label>
+                    <input type="date">
+                  </div>
+                </div>
+                
+
+
+                <div class="input-field">
+                  <label for="condition">Condition (optional)</label>
+                  <textarea class="textarea" placeholder="Enter your condition"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn">Submit</button>
+            </div>
+
           </form>
         </div>
 
@@ -426,7 +664,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2022 Made with ♥ by <a href="#" class="copyright-link">codewithsadee.</a>
+          &copy; 2024 Made with ♥ by <a href="#" class="copyright-link">PawTime.</a>
         </p>
 
         <img src="./assets/images/payment.png" width="397" height="32" loading="lazy" alt="payment method" class="img">
